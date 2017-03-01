@@ -15,7 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".OneActivity"></activity>
+        <activity android:name=".broadcast.BCOneActivity" />
+        <activity android:name=".activitycontroller.ACOneActivity" />
+        <activity android:name=".activitycontroller.ACTwoActivity" />
+        <activity android:name=".activitycontroller.ACBaseActivity" />
+        <activity android:name=".activitycontroller.ACThreeActivity"></activity>
     </application>
 
 </manifest>

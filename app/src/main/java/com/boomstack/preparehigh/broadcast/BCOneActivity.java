@@ -1,13 +1,15 @@
-package com.boomstack.preparehigh;
+package com.boomstack.preparehigh.broadcast;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class OneActivity extends AppCompatActivity {
+import com.boomstack.preparehigh.R;
+
+public class BCOneActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_one);
+        setContentView(R.layout.activity_bcone);
     }
 }

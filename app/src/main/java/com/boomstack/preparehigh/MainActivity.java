@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.boomstack.preparehigh.activitycontroller.ACOneActivity;
+import com.boomstack.preparehigh.broadcast.BCOneActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -13,10 +16,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void newTask(View view) {
-        Intent i = new Intent(this, OneActivity.class);
-        i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        startActivity(i);
+    public void goToBroadcast(View view) {
+        startActivity(new Intent(this, BCOneActivity.class));
+    }
 
+    public void onActivityControl(View view) {
+        startActivity(new Intent(this, ACOneActivity.class));
     }
 }
