@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.boomstack.preparehigh.activitycontroller.ACOneActivity;
 import com.boomstack.preparehigh.broadcast.BCOneActivity;
+import com.boomstack.preparehigh.multithread.MultiThreadActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,5 +23,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void onActivityControl(View view) {
         startActivity(new Intent(this, ACOneActivity.class));
+    }
+
+    public void onMultiThread(View view) {
+        startActivity(new Intent(this, MultiThreadActivity.class));
     }
 }

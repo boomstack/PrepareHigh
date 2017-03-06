@@ -19,7 +19,8 @@
         <activity android:name=".activitycontroller.ACOneActivity" />
         <activity android:name=".activitycontroller.ACTwoActivity" />
         <activity android:name=".activitycontroller.ACBaseActivity" />
-        <activity android:name=".activitycontroller.ACThreeActivity"></activity>
+        <activity android:name=".activitycontroller.ACThreeActivity" />
+        <activity android:name=".multithread.MultiThreadActivity"></activity>
     </application>
 
 </manifest>
