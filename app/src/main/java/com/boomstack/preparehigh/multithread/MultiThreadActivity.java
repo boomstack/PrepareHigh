@@ -8,6 +8,7 @@ import com.boomstack.preparehigh.HolaPrint;
 import com.boomstack.preparehigh.R;
 
 public class MultiThreadActivity extends AppCompatActivity {
+    MyTaskQueue<String> taskQueue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,5 +39,35 @@ public class MultiThreadActivity extends AppCompatActivity {
             }
         };
         task.execute();
+    }
+
+    //自定义任务队列
+    public void onSelfTaskQueue(View view) {
+        taskQueue = new MyTaskQueue<>(10);
+        for (int i = 0; i < 100; i++) {
+            final int finalI = i;
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    taskQueue.put("task No." + (finalI + 1));
+                }
+            }).start();
+
+        }
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                for (int i = 0; i < 1000; i++) {
+                    String result = taskQueue.take();
+                    HolaPrint.pr(result);
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
+
     }
 }

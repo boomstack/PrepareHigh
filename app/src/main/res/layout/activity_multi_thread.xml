@@ -16,4 +16,11 @@
         android:layout_height="wrap_content"
         android:onClick="onSelfAsyncTask"
         android:text="自定义AsyncTask" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onSelfTaskQueue"
+        android:text="自定义任务队列" />
+
 </LinearLayout>
